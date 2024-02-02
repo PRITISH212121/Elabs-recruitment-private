@@ -10,8 +10,6 @@ const Footer = () => {
     <div>
       <Stack
         sx={{
-          marginTop: "50px",
-
           background: "#110F0F",
         }}
       >
@@ -28,7 +26,7 @@ const Footer = () => {
             style={{
               borderRadius: "10px",
             }}
-            height={205}
+            height={155}
             src={logo}
           />
           <Box
@@ -55,56 +53,61 @@ const Footer = () => {
               paddingTop: "160px",
             }}
           >
-            <FacebookIcon
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = "#F1A23A";
-                e.currentTarget.style.scale = "1.1";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = "white";
-                e.currentTarget.style.scale = "1";
-              }}
-              sx={{
-                fontSize: "48px",
-                marginRight: "10px",
-                color: "white",
-              }}
-            />
-            <InstagramIcon
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = "#F1A23A";
-                e.currentTarget.style.scale = "1.1";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = "white";
-                e.currentTarget.style.scale = "1";
-              }}
-              sx={{
-                fontSize: "48px",
-                marginRight: "10px",
-                color: "white",
-              }}
-            />
-            <LinkedInIcon
-              onMouseEnter={(e) => {
-                e.currentTarget.style.scale = "1.1";
-                e.currentTarget.style.color = "#F1A23A";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.scale = "1";
-                e.currentTarget.style.color = "white";
-              }}
-              sx={{
-                fontSize: "48px",
-                marginRight: "10px",
-                color: "white",
-              }}
-            />
+            <a href="https://m.facebook.com/kiitelabs">
+              <FacebookIcon
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = "#F1A23A";
+                  e.currentTarget.style.scale = "1.1";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = "white";
+                  e.currentTarget.style.scale = "1";
+                }}
+                sx={{
+                  fontSize: "48px",
+                  marginRight: "10px",
+                  color: "white",
+                }}
+              />
+            </a>
+            <a href="https://www.instagram.com/elabs.kiit?igsh=NmU1emd0cmxoOGk2">
+              <InstagramIcon
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = "#F1A23A";
+                  e.currentTarget.style.scale = "1.1";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = "white";
+                  e.currentTarget.style.scale = "1";
+                }}
+                sx={{
+                  fontSize: "48px",
+                  marginRight: "10px",
+                  color: "white",
+                }}
+              />
+            </a>
+            <a href="https://www.linkedin.com/company/kiit-elabs/">
+              <LinkedInIcon
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.scale = "1.1";
+                  e.currentTarget.style.color = "#F1A23A";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.scale = "1";
+                  e.currentTarget.style.color = "white";
+                }}
+                sx={{
+                  fontSize: "48px",
+                  marginRight: "10px",
+                  color: "white",
+                }}
+              />
+            </a>
           </Box>
         </Box>
         <Box
           sx={{
-            marginTop: "20px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

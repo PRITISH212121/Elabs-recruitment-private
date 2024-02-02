@@ -1,13 +1,11 @@
 import React from "react";
 import { Card, CardMedia, CardContent, Grid } from "@mui/material";
-import { Container } from "@mui/material/Container";
 import { Typography } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Box } from "@mui/material";
-import CodeIcon from "@mui/icons-material/Code";
 import Icon from "@mui/material/Icon";
-const DomainCard = ({ id, icon, title, desc }) => {
+const DomainCard = ({ id, icon, title }) => {
   const [hovering, sethovering] = useState(false);
   const mouseenterhandler = () => {
     sethovering(true);
@@ -15,9 +13,13 @@ const DomainCard = ({ id, icon, title, desc }) => {
   const mouseleavehandler = () => {
     sethovering(false);
   };
-
   return (
-    <Link to={`/domain/${id}`}>
+    <Link
+      to={`/domain/${id}`}
+      state={{
+        title: title,
+      }}
+    >
       <Card
         onMouseEnter={mouseenterhandler}
         onMouseLeave={mouseleavehandler}
@@ -26,8 +28,14 @@ const DomainCard = ({ id, icon, title, desc }) => {
           scale: hovering ? "1.1" : "1",
           minHeight: "18vw",
           transition: "0.2s linear",
-          background: hovering ? "#F1A23A" : "#262626",
+          background: hovering
+            ? "linear-gradient(90deg, rgba(241,162,58,1) 0%, rgba(234,174,44,1) 56%, rgba(215,209,4,1) 100%)"
+            : "#262626",
           borderRadius: "10px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "space-around",
         }}
       >
         <CardContent>
@@ -36,12 +44,15 @@ const DomainCard = ({ id, icon, title, desc }) => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              justifyContent: "space-between",
+              justifyContent: "space-around",
             }}
           >
             <Icon
               sx={{
-                marginBottom: "15px",
+                height: "50px",
+                width: "100px",
+                padding: "5px",
+                marginTop: "15px",
                 color: hovering ? "white" : "#F1A23A",
               }}
             >
@@ -50,24 +61,15 @@ const DomainCard = ({ id, icon, title, desc }) => {
 
             <Typography
               gutterBottom
-              variant="h5"
               component="div"
               sx={{
+                fontSize: "20px",
                 textDecoration: "none",
                 fontFamily: "Kiwi-Maru",
                 color: hovering ? "white" : "#F1A23A",
               }}
             >
               {title}
-            </Typography>
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              sx={{
-                color: hovering ? "white" : "#C6C2C2",
-              }}
-            >
-              {desc}
             </Typography>
           </Box>
         </CardContent>
