@@ -35,7 +35,7 @@ export const domains = [
   {
     icon: <i class="fa-brands fa-xbox fa-xl"></i>,
     id: "AR&VR-Game-Development",
-    title: "AR/VR & Game-Development",
+    title: "AR/VR & Game Development",
   },
   {
     icon: <i class="fa-brands fa-square-odnoklassniki fa-xl"></i>,
