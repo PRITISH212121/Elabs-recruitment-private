@@ -1,5 +1,5 @@
 export const logo =
-  "https://www.facebook.com/photo/?fbid=363386085802377&set=a.363386042469048";
+  "https://s3-alpha.figma.com/hub/file/4058075378/55eb6a1e-813a-4ef4-b499-5c85ed363a50-cover.png";
 export const domains = [
   {
     icon: <i class="fa-brands fa-chrome fa-xl"></i>,
